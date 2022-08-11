@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --mainTextColor: #000;
+    --secondaryTextColor: rgb(51, 51, 51);
+    --mainLinkColor: #0DA2B8;
+    --mainBorderColor: rgb(218, 218, 218);
+    --mainBgColor: rgb(249, 250, 251);
+
+    /*--mainTextColor-dark:#fff;
+    --secondaryTextColor-dark:#ADB0B1;
+    --mainLinkColor-dark:rgb(30, 190,214);
+    --mainBorderColor-dark:#2B3031;
+    --mainBgColor-dark:#131415;
+
+    --mainTextColor:var(--mainTextColor-dark);
+    --secondaryTextColor:var(--secondaryTextColor-dark);
+    --mainLinkColor:var(--mainLinkColor-dark);
+    --mainBorderColor:var(--mainBorderColor-dark);
+    --mainBgColor:var(--mainBgColor-dark);*/
+}
+
+.light-mode-button {
+    background:0;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 20px;
+    width: 50px;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    border: 1px solid rgba(255,255,255,0);
+}
+
+.light-mode-button span:nth-child(1) {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 50px;
+    height:20px;
+    border-radius: 20px;
+    background-color: #d6d7db;
+    box-shadow: inset 1px 1px 3px 0 rgb(0 0 0 / 40%);
+    transition: .3s;
+}
+.light-mode-button span:nth-child(2) {
+    position: absolute;
+    top:3px;
+    left:3px;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px 0 rgb(0 0 0 / 40%);
+    transition: .3s;
+}
+
+* {
+    font-family: 'Readex Pro';
+    line-height: 1.5em;
+    box-sizing: border-box;
+    color: var(--mainTextColor);
+}
+
+body {
+    background-color: var(--mainBgColor);
+}
+
+body[light-mode=dark] {
+    background-color: #141516;
+    color: #ced4e2;
+    --mainTextColor-dark:#fff;
+    --secondaryTextColor-dark:#ADB0B1;
+    --mainLinkColor-dark:rgb(30, 190,214);
+    --mainBorderColor-dark:#2B3031;
+    --mainBgColor-dark:#131415;
+
+    --mainTextColor:var(--mainTextColor-dark);
+    --secondaryTextColor:var(--secondaryTextColor-dark);
+    --mainLinkColor:var(--mainLinkColor-dark);
+    --mainBorderColor:var(--mainBorderColor-dark);
+    --mainBgColor:var(--mainBgColor-dark);
+}
+
+body[light-mode="dark"] .light-mode-button span:nth-child(1){
+    background-color: #ced4e2;
+    color: #141516;
+}
+body[light-mode=dark] .light-mode-button span:nth-child(2) {
+    left: 31.5px;
+    background-color: #141516;
+}
+
+p, span, li {
+    color: var(--secondaryTextColor);
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--mainLinkColor);
+    font-weight: 500;
+}
+
+li {
+    line-height: 1.9em;
+}
+
+#container--main {
+    max-width: 700px;
+    height: 95vh;
+    margin: 0 auto;
+    padding: 1em;
+    align-items: center;
+}
+
+.section--page {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#wrapper--hero {
+    display: flex;
+    align-items: center;
+    gap: 4em;
+}
+
+#bio, a {
+    font-weight: 300;
+}
+
+#user--name {
+    font-size: 48px;
+    line-height: 1em;
+}
+
+#profile--pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#email {
+    color: var(--mainTextColor);
+}
+
+#socials--list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1em;
+    flex-wrap: wrap;
+}
+
+#socials--list a, footer a {
+    font-weight: 300;
+    color: var(--secondaryTextColor);
+    font-size: 0.9em;
+    transition: 0.3s;
+}
+
+#socials--list a:hover, footer a:hover {
+    font-weight: 100;
+    color: var(--mainLinkColor);
+    font-size: 0.9em;
+}
+
+#qualifications--list {
+    list-style: none;
+}
+
+#wrapper--techstack__items{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    font-size: 0.9em;
+}
+
+.card--techstack{
+    border: 1px solid var(--mainBorderColor);
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    align-items: center;
+}
+
+footer {        
+    text-align: center;    
+}
+
+footer p {
+    margin: 0;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Efrain Morin - Digital Résumé</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./styles/style.css'>    
+</head>
+<body>
+    <script>
+        var app = document.getElementsByTagName("BODY")[0];
+        if (localStorage.lightMode == "dark") {
+            app.setAttribute("light-mode", "dark");
+        }
+    </script>
+    
+    <div id="container--main">
+        <button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+            <span></span>
+            <span></span>
+        </button> 
+
+        <section id="wrapper--hero" class="section--page">
+            <img src="./assets/img/portfolio.jpg" alt="Photo" id="profile--pic">
+            <div>
+                <h1 id="user--name">Efrain Morin</h1>
+                <p id="bio">Software Developer, Full-Stack Developer, Computer Engineer.</p>
+                <p id="email">👉 morin.miranda.efrain@gmail.com</p>
+            </div>
+        </section>
+
+        <section id="section--page">
+            <div id="socials--list">
+                <a href="#" target="_blank">Twitter</a>
+                <a href="https://github.com/efrain-morin" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/efrain-morin" target="_blank">LinkedIn</a>
+                <a href="./assets/resume.pdf" target="_blank">Download Résumé</a>
+            </div>
+        </section>
+
+        <section class="section--page">
+            <h2>Skills and Qualifications</h2>
+            <ul id="qualifications--list">
+                <li>✔️ Experience working in .NET Core Framework.</li>
+                <li>✔️ Extensive knowledge in SQL & Database Design.</li>
+                <li>✔️ Experience with front & backend development.</li>
+            </ul>
+        </section>
+
+        <section class="section--page">
+            <h2>Tech stack</h2>
+        
+            <div id="wrapper--techstack__items">
+                <div class="card--techstack"><span>Python, C#, C++</span></div>
+                <div class="card--techstack"><span>.NET, Angular</span></div>
+                <div class="card--techstack"><span>Flutter, React</span></div>
+                <div class="card--techstack"><span>Oracle SQL, SQL Server, MySQL</span></div>
+            </div>
+        </section>        
+    </div>
+
+    
+
+    <footer>
+        <p>Copyright © 2022 - All Rights Reserved</p>
+        <a href="./es/Index.html">Ver Curriculum en Español</a>
+    </footer>
+</body>
+<script>
+    function toggle_light_mode() {
+        var app = document.getElementsByTagName("BODY")[0];
+        if (localStorage.lightMode == "dark") {
+            localStorage.lightMode = "light";
+            app.setAttribute("light-mode", "light");
+        } else {
+            localStorage.lightMode = "dark";
+            app.setAttribute("light-mode", "dark");
+        }		
+    }
+</script>
+</html>
